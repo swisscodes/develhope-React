@@ -1,0 +1,3 @@
+What happens if the `name` variable contains a JSX expression instead of a string?
+
+The full jsx expression is displayed after being transpiled.

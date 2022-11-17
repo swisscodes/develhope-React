@@ -1,0 +1,9 @@
+What happens if the `name` variable is not passed to the function?
+
+
+ANSWER
+Nothing is displayed in the scope of name since its not passed
+
+only Hello will be displayed
+
+if will fail silently.
