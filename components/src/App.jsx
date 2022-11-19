@@ -9,7 +9,7 @@ class App extends React.Component {
       <div>
         <Hello />
         <Welcome name=<strong>{'Obafemi'}</strong> age={12} />
-        <Counter />
+        <Counter initValue={1} incrementBy={1} />
       </div>
     );
   }

@@ -6,8 +6,10 @@ class Counter extends React.Component {
   };
 
   componentDidMount() {
+    const { initValue, incrementBy } = this.props;
+    this.setState((state) => (state.count = initValue));
     setInterval(() => {
-      this.setState((state) => (state.count += 1));
+      this.setState((state) => (state.count += incrementBy));
     }, 1000);
   }
 
