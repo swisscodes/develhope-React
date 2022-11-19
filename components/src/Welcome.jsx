@@ -7,7 +7,7 @@ class Welcome extends React.Component {
     return (
       <>
         <p>Welcome {name}</p>
-        {age && <Age age={age} />}
+        {age > 18 && age < 65 && name === 'john' && <Age age={age} />}
       </>
     );
   }
@@ -18,4 +18,6 @@ export default Welcome;
 /* 
 Conditional Rendering - 01 {age > 18 && <Age age={age} />}
 Conditional Rendering - 02 {age && <Age age={age} />}
+Conditional Rendering - 03 {age > 18 && age < 65 && <Age age={age} />}
+Conditional Rendering - 04 {age > 18 && age < 65 && name === 'john' && <Age age={age} />}
 */
