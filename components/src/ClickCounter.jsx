@@ -2,16 +2,9 @@ import React from 'react';
 
 class ClickCounter extends React.Component {
   state = {
-    count: 0,
-    incrementBy: 1,
+    count: this.props.initValue,
+    incrementBy: this.props.incrementBy,
   };
-
-  initValue = this.props.initValue;
-  incrementBy = this.props.incrementBy;
-
-  componentDidMount() {
-    this.setState((state) => (state.count = this.initValue));
-  }
 
   render() {
     return (
@@ -24,7 +17,7 @@ class ClickCounter extends React.Component {
 
   //
   increaseCount() {
-    this.setState((state) => (state.count += this.incrementBy));
+    this.setState((state) => (state.count += state.incrementBy));
   }
 }
 
