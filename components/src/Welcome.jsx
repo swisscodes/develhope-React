@@ -7,7 +7,7 @@ class Welcome extends React.Component {
     return (
       <>
         <p>Welcome {name}</p>
-        <Age age={age} />
+        {age > 18 && <Age age={age} />}
       </>
     );
   }
