@@ -23,8 +23,12 @@ function Login() {
 
   //
   function getFormFields(e) {
-    if (e.target.name !== 'remember') {
-      setFormFields(() => ({ ...formFields, [e.target.name]: e.target.value }));
+    if (e.target.type !== 'checkbox') {
+      setFormFields(() => ({
+        ...formFields,
+        [e.target.name]: e.target.value,
+        remember: false,
+      }));
     } else {
       setFormFields(() => ({
         ...formFields,
