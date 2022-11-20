@@ -18,6 +18,9 @@ function Login() {
         name='remember'
         onChange={(e) => getFormFields(e)}
       />
+      <button type='submit' disabled={validateInput()}>
+        Login
+      </button>
     </div>
   );
 
@@ -36,6 +39,10 @@ function Login() {
       }));
     }
     console.log(formFields);
+  }
+
+  function validateInput() {
+    return !(formFields.username && formFields.password) ? true : false;
   }
 }
 
