@@ -5,6 +5,7 @@ import Counter from './Counter';
 import ClickCounter from './ClickCounter';
 import ClickTracker from './ClickTracker';
 import InteractiveWelcome from './InteractiveWelcome';
+import Login from './Login';
 class App extends React.Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class App extends React.Component {
         <ClickCounter initValue={1} incrementBy={1} />
         <ClickTracker />
         <InteractiveWelcome />
+        <Login />
       </div>
     );
   }
