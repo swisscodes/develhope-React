@@ -55,8 +55,8 @@ function Login() {
     return !(formFields.username && formFields.password) ? true : false;
   }
 
-  function onLogin(e, formState) {
-    console.log(formState);
+  async function onLogin(e, formState) {
+    // do some await to send data to server
     setFormFields({});
   }
 }
