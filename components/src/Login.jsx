@@ -22,6 +22,7 @@ function Login() {
       <input
         type='checkbox'
         name='remember'
+        checked={formFields.remember ?? false}
         onChange={(e) => getFormFields(e)}
       />
       <button
