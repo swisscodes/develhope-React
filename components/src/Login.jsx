@@ -5,11 +5,17 @@ function Login() {
   return (
     <div>
       <label htmlFor='username'>Username: </label>
-      <input type='text' name='username' onChange={(e) => getFormFields(e)} />
+      <input
+        type='text'
+        name='username'
+        value={formFields.username ?? ''}
+        onChange={(e) => getFormFields(e, formFields)}
+      />
       <label htmlFor='password'>Password: </label>
       <input
         type='password'
         name='password'
+        value={formFields.password ?? ''}
         onChange={(e) => getFormFields(e)}
       />
       <label htmlFor='remember'>Remember: </label>
@@ -18,7 +24,11 @@ function Login() {
         name='remember'
         onChange={(e) => getFormFields(e)}
       />
-      <button type='submit' disabled={validateInput()}>
+      <button
+        type='submit'
+        disabled={validateInput()}
+        onClick={(e) => onLogin(e, formFields)}
+      >
         Login
       </button>
     </div>
@@ -43,6 +53,11 @@ function Login() {
 
   function validateInput() {
     return !(formFields.username && formFields.password) ? true : false;
+  }
+
+  function onLogin(e, formState) {
+    console.log(formState);
+    setFormFields({});
   }
 }
 
