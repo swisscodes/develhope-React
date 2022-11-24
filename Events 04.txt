@@ -1,0 +1,8 @@
+Events 04
+
+Modifiy the `ClickTracker` so that each button contains an image instead of a text. How does this affect the event handler?
+
+Now the img element is shadowing the botton onClick now we cant click the 
+button the click now goes to img 
+maybe we need to give the onclick to the img
+or disbale its pointer event
