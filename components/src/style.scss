@@ -1,0 +1,11 @@
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button img {
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+}

@@ -32,6 +32,9 @@ function Login() {
       >
         Login
       </button>
+      <button type='reset' onClick={(e) => onLogin(e)}>
+        Reset
+      </button>
     </div>
   );
 
@@ -49,7 +52,6 @@ function Login() {
         [e.target.name]: e.target.checked,
       }));
     }
-    console.log(formFields);
   }
 
   function validateInput() {
@@ -58,7 +60,9 @@ function Login() {
 
   async function onLogin(e, formState) {
     // do some await to send data to server
-    setFormFields({});
+    if (e.target.type === 'reset') {
+      setFormFields({});
+    }
   }
 }
 
