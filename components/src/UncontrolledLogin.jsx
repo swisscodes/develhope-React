@@ -7,9 +7,9 @@ function UncontrolledLogin() {
     <div>
       <form onSubmit={(e) => getFormFields(e, loginFormRef)} ref={loginFormRef}>
         <label htmlFor='username'>Username: </label>
-        <input type='text' name='username' onChange={(e) => refset(e)} />
+        <input type='text' name='username' />
         <label htmlFor='password'>Password:</label>
-        <input type='password' name='password' onChange={(e) => refset(e)} />
+        <input type='password' name='password' />
         <label htmlFor='remember'>Remember: </label>
         <input type='checkbox' name='remember' />
         <button type='submit'>Login</button>
@@ -28,15 +28,6 @@ function UncontrolledLogin() {
       const { username, password, remember } = e.target.elements;
       console.log(username.value, password.value, remember.checked);
     }
-  }
-
-  function refset(e) {
-    loginFormRef.current = {
-      ...loginFormRef.current,
-      [e.target.name]: e.target.value,
-    };
-
-    console.log(loginFormRef.current[e.target.name]);
   }
 }
 
