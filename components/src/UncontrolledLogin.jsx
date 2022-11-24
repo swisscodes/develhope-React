@@ -7,7 +7,7 @@ function UncontrolledLogin() {
     <div>
       <form onSubmit={(e) => getFormFields(e, loginFormRef)} ref={loginFormRef}>
         <label htmlFor='username'>Username: </label>
-        <input type='text' name='username' />
+        <input type='text' name='username' autoFocus />
         <label htmlFor='password'>Password:</label>
         <input type='password' name='password' />
         <label htmlFor='remember'>Remember: </label>
