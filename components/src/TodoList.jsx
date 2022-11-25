@@ -7,7 +7,12 @@ function TodoList() {
     <div>
       <ul>
         {items.map((item, i) => (
-          <li key={item + i}>{item}</li>
+          <li key={item + i}>
+            {item}
+            <button key={'btn' + i} type='button' onClick={() => onRemove(i)}>
+              Remove
+            </button>
+          </li>
         ))}
       </ul>
       <input type='text' value={typedValue} onChange={(el) => onType(el)} />
@@ -15,7 +20,7 @@ function TodoList() {
         Add
       </button>
       <button type='reset' onClick={(el) => onAddOrReset(el)}>
-        Rest
+        Reset
       </button>
     </div>
   );
@@ -25,9 +30,17 @@ function TodoList() {
       setItem(() => []);
       return;
     }
-    setItem(() => [...items, typedValue]);
-    setTypeValue(() => '');
+    if (typedValue) {
+      setItem(() => [...items, typedValue]);
+      setTypeValue(() => '');
+    }
   }
+
+  function onRemove(index) {
+    items.splice(index, 1);
+    setItem(() => [...items]);
+  }
+
   function onType(el) {
     setTypeValue(() => el.target.value);
   }
