@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Todos from './Todos';
 
 function TodoList() {
   const [items, setItem] = useState([]);
@@ -7,12 +8,7 @@ function TodoList() {
     <div>
       <ul>
         {items.map((item, i) => (
-          <li key={item + i}>
-            {item}
-            <button key={'btn' + i} type='button' onClick={() => onRemove(i)}>
-              Remove
-            </button>
-          </li>
+          <Todos onRemove={onRemove} item={item} index={i} />
         ))}
       </ul>
       <input type='text' value={typedValue} onChange={(el) => onType(el)} />
