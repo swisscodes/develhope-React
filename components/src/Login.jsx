@@ -3,47 +3,44 @@ import React, { useState } from 'react';
 function Login() {
   const [formFields, setFormFields] = useState({});
   return (
-    console.log(formFields.password?.length),
-    (
-      <div>
-        <label htmlFor='username'>Username: </label>
-        <input
-          type='text'
-          name='username'
-          value={formFields.username ?? ''}
-          onChange={(e) => getFormFields(e, formFields)}
-        />
-        <label htmlFor='password'>Password: </label>
-        <input
-          type='password'
-          name='password'
-          value={formFields.password ?? ''}
-          onChange={(e) => getFormFields(e)}
-        />
-        <label htmlFor='remember'>Remember: </label>
-        <input
-          type='checkbox'
-          name='remember'
-          checked={formFields.remember ?? false}
-          onChange={(e) => getFormFields(e)}
-        />
-        <button
-          className={
-            !formFields.password || formFields.password?.length < 8
-              ? 'form-error'
-              : 'form-success'
-          }
-          type='submit'
-          disabled={validateInput()}
-          onClick={(e) => onLogin(e, formFields)}
-        >
-          Login
-        </button>
-        <button type='reset' onClick={(e) => onLogin(e)}>
-          Reset
-        </button>
-      </div>
-    )
+    <div>
+      <label htmlFor='username'>Username: </label>
+      <input
+        type='text'
+        name='username'
+        value={formFields.username ?? ''}
+        onChange={(e) => getFormFields(e, formFields)}
+      />
+      <label htmlFor='password'>Password: </label>
+      <input
+        type='password'
+        name='password'
+        value={formFields.password ?? ''}
+        onChange={(e) => getFormFields(e)}
+      />
+      <label htmlFor='remember'>Remember: </label>
+      <input
+        type='checkbox'
+        name='remember'
+        checked={formFields.remember ?? false}
+        onChange={(e) => getFormFields(e)}
+      />
+      <button
+        className={
+          !formFields.password || formFields.password?.length < 8
+            ? 'form-error'
+            : 'form-success'
+        }
+        type='submit'
+        disabled={validateInput()}
+        onClick={(e) => onLogin(e, formFields)}
+      >
+        Login
+      </button>
+      <button type='reset' onClick={(e) => onLogin(e)}>
+        Reset
+      </button>
+    </div>
   );
 
   //

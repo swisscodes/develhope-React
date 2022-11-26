@@ -9,6 +9,7 @@ import Login from './Login';
 import UncontrolledLogin from './UncontrolledLogin';
 import TodoList from './TodoList';
 import Wrapped1 from './Wrapped1';
+import DisplayLanguage from './DisplayLanguage';
 
 class App extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class App extends React.Component {
         <UncontrolledLogin />
         <TodoList />
         <Wrapped1 />
+        <DisplayLanguage />
       </div>
     );
   }
