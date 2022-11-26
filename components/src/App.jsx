@@ -8,6 +8,8 @@ import InteractiveWelcome from './InteractiveWelcome';
 import Login from './Login';
 import UncontrolledLogin from './UncontrolledLogin';
 import TodoList from './TodoList';
+import Wrapped1 from './Wrapped1';
+
 class App extends React.Component {
   render() {
     return (
@@ -21,6 +23,7 @@ class App extends React.Component {
         <Login />
         <UncontrolledLogin />
         <TodoList />
+        <Wrapped1 />
       </div>
     );
   }
