@@ -5,7 +5,7 @@ class Welcome extends React.Component {
   render() {
     const { name = 'swiss bobo', age } = this.props;
     return (
-      <>
+      <div className='welcome'>
         <p>Welcome {name}</p>
 
         {/*Conditional Rendering - 01 */}
@@ -19,7 +19,7 @@ class Welcome extends React.Component {
 
         {/*Conditional Rendering - 03 */}
         {age > 18 && age < 65 && name === 'john' && <Age age={age} />}
-      </>
+      </div>
     );
   }
 }
