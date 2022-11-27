@@ -13,6 +13,7 @@ import DisplayLanguage from './DisplayLanguage';
 import Sum from './Sum';
 import ClickCounterFunc from './ClickCounterFunc';
 import CounterFunc from './CounterFunc';
+import Github from './Github';
 
 class App extends React.Component {
   render() {
@@ -32,6 +33,7 @@ class App extends React.Component {
         <Sum numbers={[1, 2, 3, 4, 5]} />
         <ClickCounterFunc initValue={1} incrementBy={1} />
         <CounterFunc />
+        <Github />
       </div>
     );
   }
