@@ -10,6 +10,7 @@ import UncontrolledLogin from './UncontrolledLogin';
 import TodoList from './TodoList';
 import Wrapped1 from './Wrapped1';
 import DisplayLanguage from './DisplayLanguage';
+import Sum from './Sum';
 
 class App extends React.Component {
   render() {
@@ -26,6 +27,7 @@ class App extends React.Component {
         <TodoList />
         <Wrapped1 />
         <DisplayLanguage />
+        <Sum numbers={[1, 2, 3, 4, 5]} />
       </div>
     );
   }

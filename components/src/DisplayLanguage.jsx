@@ -25,7 +25,6 @@ function DisplayLanguage() {
 
   function selectedLang(e) {
     setLang(() => e.target.value);
-    langValueContext.lang = lang;
   }
 }
 
