@@ -12,6 +12,7 @@ import Wrapped1 from './Wrapped1';
 import DisplayLanguage from './DisplayLanguage';
 import Sum from './Sum';
 import ClickCounterFunc from './ClickCounterFunc';
+import CounterFunc from './CounterFunc';
 
 class App extends React.Component {
   render() {
@@ -29,7 +30,8 @@ class App extends React.Component {
         <Wrapped1 />
         <DisplayLanguage />
         <Sum numbers={[1, 2, 3, 4, 5]} />
-        <ClickCounterFunc initValue={0} incrementBy={1} />
+        <ClickCounterFunc initValue={1} incrementBy={1} />
+        <CounterFunc />
       </div>
     );
   }

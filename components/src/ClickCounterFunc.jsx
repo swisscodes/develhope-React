@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import CounterButton from './CounterButton';
 
 function ClickCounterFunc({ initValue = 1, incrementBy }) {
   const [count, setCount] = useState(initValue);
+
   return (
     <>
       <p>Current Value: {count}</p>
