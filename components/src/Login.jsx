@@ -46,14 +46,14 @@ function Login() {
   //
   function getFormFields(e) {
     if (e.target.type !== 'checkbox') {
-      setFormFields(() => ({
-        ...formFields,
+      setFormFields((state) => ({
+        ...state,
         [e.target.name]: e.target.value,
         remember: false,
       }));
     } else {
-      setFormFields(() => ({
-        ...formFields,
+      setFormFields((state) => ({
+        ...state,
         [e.target.name]: e.target.checked,
       }));
     }
