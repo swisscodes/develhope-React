@@ -15,6 +15,7 @@ import ClickCounterFunc from './ClickCounterFunc';
 import CounterFunc from './CounterFunc';
 import Github from './Github';
 import GithubUsers from './GithubUsers';
+import Githubuser1 from './Githubuser1';
 
 class App extends React.Component {
   render() {
@@ -36,6 +37,7 @@ class App extends React.Component {
         <CounterFunc />
         <Github />
         <GithubUsers />
+        <Githubuser1 />
       </div>
     );
   }

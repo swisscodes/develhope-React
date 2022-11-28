@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function GithubUsers() {
+function useGithubUsers() {
   const [gitUsers, setGitUsers] = useState([]);
   const [newUser, setNewUser] = useState('');
 
@@ -29,4 +29,4 @@ function GithubUsers() {
   }
 }
 
-export default GithubUsers;
+export default useGithubUsers;
