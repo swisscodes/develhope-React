@@ -14,6 +14,7 @@ import Sum from './Sum';
 import ClickCounterFunc from './ClickCounterFunc';
 import CounterFunc from './CounterFunc';
 import Github from './Github';
+import GithubUsers from './GithubUsers';
 
 class App extends React.Component {
   render() {
@@ -34,6 +35,7 @@ class App extends React.Component {
         <ClickCounterFunc initValue={1} incrementBy={1} />
         <CounterFunc />
         <Github />
+        <GithubUsers />
       </div>
     );
   }
