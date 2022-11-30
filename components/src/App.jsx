@@ -16,6 +16,7 @@ import CounterFunc from './CounterFunc';
 import Github from './Github';
 import GithubUsers from './GithubUsers';
 import Githubuser1 from './Githubuser1';
+import CardDetails from './CardDetails';
 
 class App extends React.Component {
   render() {
@@ -38,6 +39,7 @@ class App extends React.Component {
         <Github />
         <GithubUsers />
         <Githubuser1 />
+        <CardDetails />
       </div>
     );
   }
