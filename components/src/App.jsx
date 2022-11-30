@@ -17,6 +17,7 @@ import Github from './Github';
 import GithubUsers from './GithubUsers';
 import Githubuser1 from './Githubuser1';
 import CardDetails from './CardDetails';
+import FilteredList from './FilteredList';
 
 class App extends React.Component {
   render() {
@@ -40,6 +41,14 @@ class App extends React.Component {
         <GithubUsers />
         <Githubuser1 />
         <CardDetails />
+        <FilteredList
+          todosList={[
+            { name: 'Obafemi', age: 35, id: 1 },
+            { name: 'guy', age: 16, id: 2 },
+            { name: 'babe', age: 25, id: 3 },
+            { name: 'andy', age: 56, id: 4 },
+          ]}
+        />
       </div>
     );
   }
