@@ -7,11 +7,13 @@ import Welcome from './Welcome';
 import Counter from './Counter';
 import Github from './Github';
 import DisplayLanguage from './DisplayLanguage';
+import ErrorPage from './error-page';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Welcome name='world' />,
+    errorElement: <ErrorPage />,
   },
   {
     path: '/counter',
