@@ -3,13 +3,17 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
-
 import Welcome from './Welcome';
+import Counter from './Counter';
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <Welcome name='world' />,
+  },
+  {
+    path: '/counter',
+    element: <Counter />,
   },
 ]);
 

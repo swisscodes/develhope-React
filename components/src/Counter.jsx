@@ -3,8 +3,8 @@ import CounterDisplay from './CounterDisplay';
 
 class Counter extends React.Component {
   state = {
-    count: this.props.initValue,
-    incrementBy: this.props.incrementBy,
+    count: this.props.initValue ?? 0,
+    incrementBy: this.props.incrementBy ?? 1,
   };
 
   componentDidMount() {
