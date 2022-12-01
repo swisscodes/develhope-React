@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Welcome from './Welcome';
 import Counter from './Counter';
 import Github from './Github';
+import DisplayLanguage from './DisplayLanguage';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: '/user/:userId',
     element: <Github />,
+  },
+  {
+    path: '/lang',
+    element: <DisplayLanguage />,
   },
 ]);
 
