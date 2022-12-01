@@ -5,6 +5,7 @@ import App from './App';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import Welcome from './Welcome';
 import Counter from './Counter';
+import Github from './Github';
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: '/counter',
     element: <Counter />,
+  },
+  {
+    path: '/user/:userId',
+    element: <Github />,
   },
 ]);
 
