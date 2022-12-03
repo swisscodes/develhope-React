@@ -8,6 +8,7 @@ import Counter from './Counter';
 import Github from './Github';
 import DisplayLanguage from './DisplayLanguage';
 import ErrorPage from './error-page';
+import Githubusers from './GithubUsers';
 
 const router = createBrowserRouter([
   {
@@ -19,10 +20,17 @@ const router = createBrowserRouter([
     path: '/counter',
     element: <Counter />,
   },
+
   {
-    path: '/user/:userId',
+    path: '/users',
+    element: <Githubusers />,
+  },
+
+  {
+    path: 'users/:userId',
     element: <Github />,
   },
+
   {
     path: '/lang',
     element: <DisplayLanguage />,

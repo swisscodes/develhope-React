@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import useGithubUser from './useGithubUser';
 
-function Githubuser1() {
+function Githubuser1({ username }) {
   const { user, error, loading, getGitUser } = useGithubUser();
 
   useEffect(() => {
-    getGitUser('swissbobo');
+    getGitUser(username);
     return () => {};
   });
 
   return (
     <div>
-      <h1>useGithub hook</h1>
       {user && (
         <>
           <h1>username: {user?.login}</h1>

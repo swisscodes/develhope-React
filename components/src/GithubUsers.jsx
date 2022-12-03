@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { Link, Routes, Route } from 'react-router-dom';
+import Githubuser1 from './Githubuser1';
 
-function useGithubUsers() {
+function GithubUsers() {
   const [gitUsers, setGitUsers] = useState([]);
   const [newUser, setNewUser] = useState('');
 
@@ -13,7 +15,9 @@ function useGithubUsers() {
       </button>
       <h1>Github Users</h1>
       {gitUsers.map((item, index) => (
-        <p key={index}>{item}</p>
+        <Link to={`./${item}`} key={index}>
+          {item}
+        </Link>
       ))}
     </div>
   );
@@ -29,4 +33,4 @@ function useGithubUsers() {
   }
 }
 
-export default useGithubUsers;
+export default GithubUsers;
