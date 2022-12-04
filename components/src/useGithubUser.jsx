@@ -13,6 +13,11 @@ function useGithubUser({ username }) {
     user: data,
     isLoading: !error && !data,
     isError: error,
+    useReFetcher: (username) =>
+      useSWR(
+        username ? `https://api.github.com/users/${username}` : null,
+        fetcher
+      ),
   };
 }
 
