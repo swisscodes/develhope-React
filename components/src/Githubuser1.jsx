@@ -2,12 +2,7 @@ import React, { useEffect } from 'react';
 import useGithubUser from './useGithubUser';
 
 function Githubuser1({ username }) {
-  const { user, error, loading, getGitUser } = useGithubUser();
-
-  useEffect(() => {
-    getGitUser(username);
-    return () => {};
-  });
+  const { user, isLoading, isError } = useGithubUser({ username });
 
   return (
     <div>
